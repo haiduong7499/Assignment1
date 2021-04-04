@@ -1,0 +1,12 @@
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\bin\Debug\net5.0\Assignment.Shared.deps.json
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\bin\Debug\net5.0\Assignment.Shared.dll
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\bin\Debug\net5.0\ref\Assignment.Shared.dll
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\bin\Debug\net5.0\Assignment.Shared.pdb
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.csprojAssemblyReference.cache
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.AssemblyInfoInputs.cache
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.AssemblyInfo.cs
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.csproj.CoreCompileInputs.cache
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.dll
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\ref\Assignment.Shared.dll
+E:\Year4\NashTech\Assignment\Assignment\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.pdb
