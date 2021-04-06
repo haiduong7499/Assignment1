@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e90o7lzFq5yoCh+/arAhyPnODVUg2huPLbzAisUr4zZgO7eVwY7Puxzi2vTRb3VTnG9w1EjvFy0+japRbJ5iWg==",
+  "dgSpecHash": "FXdmDP0CzrtnyWpkHe63q+DLnlQCoCGxV2SxXpk8mhQTbltFMLrNfA08y8pllNuYiL/GLF40ARw/S72pnOiLVA==",
   "success": true,
-  "projectFilePath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.CustomerSite\\Assignment.CustomerSite.csproj",
+  "projectFilePath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.CustomerSite\\Assignment.CustomerSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.4\\microsoft.aspnetcore.authentication.openidconnect.5.0.4.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

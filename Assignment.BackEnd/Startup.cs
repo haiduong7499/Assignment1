@@ -15,6 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using System.Reflection;
 
 namespace Assignment.BackEnd
 {
@@ -34,7 +36,7 @@ namespace Assignment.BackEnd
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -83,7 +85,7 @@ namespace Assignment.BackEnd
                         {
                             TokenUrl = new Uri("/connect/token", UriKind.Relative),
                             AuthorizationUrl = new Uri("/connect/authorize", UriKind.Relative),
-                            Scopes = new Dictionary<string, string> { { "rookieshop.api", "Rookie Shop API" } }
+                            Scopes = new Dictionary<string, string> { { "assignment.api", "Assignment Shop API" } }
                         },
                     },
                 });

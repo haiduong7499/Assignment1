@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.BackEnd\\Assignment.BackEnd.csproj": {}
+    "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.BackEnd\\Assignment.BackEnd.csproj": {}
   },
   "projects": {
-    "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.BackEnd\\Assignment.BackEnd.csproj": {
+    "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.BackEnd\\Assignment.BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.BackEnd\\Assignment.BackEnd.csproj",
+        "projectUniqueName": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.BackEnd\\Assignment.BackEnd.csproj",
         "projectName": "Assignment.BackEnd",
-        "projectPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.BackEnd\\Assignment.BackEnd.csproj",
+        "projectPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.BackEnd\\Assignment.BackEnd.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.BackEnd\\obj\\",
+        "outputPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj": {
-                "projectPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj"
+              "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj": {
+                "projectPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj"
               }
             }
           }
@@ -48,6 +48,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "IdentityServer4.AspNetIdentity": {
               "target": "Package",
               "version": "[4.1.2, )"
@@ -99,14 +107,14 @@
         }
       }
     },
-    "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj": {
+    "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj",
+        "projectUniqueName": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj",
         "projectName": "Assignment.Shared",
-        "projectPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj",
+        "projectPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\obj\\",
+        "outputPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

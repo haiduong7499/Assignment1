@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj": {}
+    "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj": {}
   },
   "projects": {
-    "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj": {
+    "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj",
+        "projectUniqueName": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj",
         "projectName": "Assignment.Shared",
-        "projectPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\Assignment.Shared.csproj",
+        "projectPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "E:\\Year4\\NashTech\\Assignment\\Assignment\\Assignment.Shared\\obj\\",
+        "outputPath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
