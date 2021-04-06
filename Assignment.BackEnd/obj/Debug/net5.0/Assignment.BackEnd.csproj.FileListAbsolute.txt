@@ -94,6 +94,7 @@ E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\Assi
 E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\ref\Assignment.BackEnd.dll
 E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.pdb
 E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.genruntimeconfig.cache
+<<<<<<< HEAD
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\appsettings.Development.json
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\appsettings.json
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Assignment.BackEnd.StaticWebAssets.xml
@@ -192,3 +193,7 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\obj\Debug\net5.0\Ass
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.genruntimeconfig.cache
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\AutoMapper.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+=======
+E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\bin\Debug\net5.0\AutoMapper.dll
+E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+>>>>>>> a7c890a9e6622adff040cb2b29ff8a33389a8aa1
