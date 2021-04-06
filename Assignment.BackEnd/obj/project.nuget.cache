@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "iIuF1Ey/gMsvyLaIrlHmoMwhhGh3F1kvlne1HYqpcsZ2zskSbTxdxanS6MrdYzW3Xsb6LGRuJ5AFkJyMlWlpQA==",
-=======
-  "dgSpecHash": "72n9Pvf+eO4nQmQEEC8wAcKdIVH3Xqd1m4wQ3+mjtZ0vG7Um3QO3Z3wLKEv9iYB6gXHYsdzu0BN8SHVxsk6nJA==",
->>>>>>> a7c890a9e6622adff040cb2b29ff8a33389a8aa1
   "success": true,
   "projectFilePath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.BackEnd\\Assignment.BackEnd.csproj",
   "expectedPackageFiles": [

@@ -341,25 +341,12 @@ namespace Assignment.BackEnd.Migrations
 
             modelBuilder.Entity("Assignment.BackEnd.Models.Product", b =>
                 {
-<<<<<<< HEAD
+
                     b.HasOne("Assignment.BackEnd.Models.Category", "Category")
                         .WithMany("Product")
                         .HasForeignKey("CategoryID");
-=======
-                    b.HasOne("Assignment.BackEnd.Models.Brand", "Brand")
-                        .WithMany()
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
-                    b.HasOne("Assignment.BackEnd.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Brand");
->>>>>>> a7c890a9e6622adff040cb2b29ff8a33389a8aa1
+                    
 
                     b.Navigation("Category");
                 });

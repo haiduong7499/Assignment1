@@ -15,10 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-<<<<<<< HEAD
 using AutoMapper;
-=======
->>>>>>> a7c890a9e6622adff040cb2b29ff8a33389a8aa1
+
 using System.Reflection;
 
 namespace Assignment.BackEnd
