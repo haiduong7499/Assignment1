@@ -94,3 +94,5 @@ E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\Assi
 E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\ref\Assignment.BackEnd.dll
 E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.pdb
 E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.genruntimeconfig.cache
+E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\bin\Debug\net5.0\AutoMapper.dll
+E:\Year4\NashTech\Assignment\Assignment\Assignment.BackEnd\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
