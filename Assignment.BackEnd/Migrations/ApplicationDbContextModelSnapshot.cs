@@ -73,69 +73,6 @@ namespace Assignment.BackEnd.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Assignment.BackEnd.Models.Category", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Category");
-                });
-
-            modelBuilder.Entity("Assignment.BackEnd.Models.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BrandId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NameProduct")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("ProductImg")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Rated")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BrandId");
-
-                    b.HasIndex("CategoryID");
-
-                    b.ToTable("Products");
-                });
-
             modelBuilder.Entity("Assignment.BackEnd.Models.User", b =>
                 {
                     b.Property<string>("Id")
@@ -341,12 +278,9 @@ namespace Assignment.BackEnd.Migrations
 
             modelBuilder.Entity("Assignment.BackEnd.Models.Product", b =>
                 {
-
                     b.HasOne("Assignment.BackEnd.Models.Category", "Category")
                         .WithMany("Product")
                         .HasForeignKey("CategoryID");
-
-                    
 
                     b.Navigation("Category");
                 });
