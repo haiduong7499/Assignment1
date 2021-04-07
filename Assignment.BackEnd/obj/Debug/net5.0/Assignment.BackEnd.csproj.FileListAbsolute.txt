@@ -96,3 +96,9 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\obj\Debug\net5.0\Ass
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\obj\Debug\net5.0\ref\Assignment.BackEnd.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.pdb
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\obj\Debug\net5.0\Assignment.BackEnd.genruntimeconfig.cache
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\System.IO.Pipelines.dll

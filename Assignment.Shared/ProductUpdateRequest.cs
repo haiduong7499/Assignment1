@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 
 namespace Assignment.Shared
 {
@@ -11,7 +8,7 @@ namespace Assignment.Shared
         public string NameProduct { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public string ProductImg { get; set; }
+        public IFormFile ProductImg { get; set; }
         public int Rated { get; set; }
         public DateTime UpdateDate { get; set; }
         public string CategoryID { get; set; }

@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 
 using System.Reflection;
+using Assignment.BackEnd.Services;
 
 namespace Assignment.BackEnd
 {
@@ -38,6 +39,7 @@ namespace Assignment.BackEnd
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddTransient<IStorageService, FileStorageService>();
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();

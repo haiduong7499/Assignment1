@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K0SHEjOMDMJQQEoKgF/nZLvtZxWVocX6/1JEf3G/hTRnWxnJyfsM+Mn+JMwhBCl/gVy/MGd4qe83/JPT3v2Zog==",
+  "dgSpecHash": "Pr/sgSmAH+XtR1zfv/d1NeEHfq1KcItONUTrkmHwWxJ1Aivvo1CU1E/fxS/Ynj8buBmFCrax6Z5XDcGVK2i5FQ==",
   "success": true,
   "projectFilePath": "E:\\Year4\\NashTech\\New folder\\Assignment1\\Assignment.Shared\\Assignment.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.5\\microsoft.aspnetcore.http.features.5.0.5.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

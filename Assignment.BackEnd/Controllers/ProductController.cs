@@ -8,7 +8,11 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Assignment.BackEnd.Models;
+using Assignment.BackEnd.Services;
+using System.IO;
+using System.Net.Http.Headers;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace Assignment.BackEnd.Controllers
 {
@@ -18,19 +22,25 @@ namespace Assignment.BackEnd.Controllers
     public class ProductController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IStorageService _storageService;
         private IMapper _mapper;
-        public ProductController(ApplicationDbContext context, IMapper mapper)
+        public ProductController(ApplicationDbContext context, IMapper mapper, IStorageService storageService)
         {
             _context = context;
             _mapper = mapper;
+            _storageService = storageService;
         }
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IEnumerable<ProductRespone>> GetProduct()
         {
             var product = await _context.Products.ToListAsync();
+            foreach (var item in product)
+            {
+                item.ProductImg = _storageService.GetFileUrl(item.ProductImg);
+            }
             var productRes = _mapper.Map<IEnumerable<ProductRespone>>(product);
-
             return productRes;
         }
         [HttpGet("{id}")]
@@ -49,29 +59,39 @@ namespace Assignment.BackEnd.Controllers
         }
         [HttpPut("{id}")]
         [Authorize(Roles = "admin")]
-        public async Task<ActionResult<ProductRequest>> UpdateProduct(string id,[FromForm] ProductUpdateRequest updateRequest)
+        public async Task<ActionResult<ProductRespone>> UpdateProduct(string id,[FromForm] ProductUpdateRequest updateRequest)
         {
             var product = await _context.Products.FindAsync(id);
-
-            if (product == null)
-            {
-                return NotFound();
-            }
 
             _context.Entry(product).CurrentValues.SetValues(updateRequest);
             product.UpdateDate = DateTime.Now.Date;
 
             await _context.SaveChangesAsync();
 
-            var productRes = _mapper.Map<ProductRequest>(product);
+            var productRes = _mapper.Map<ProductRespone>(product);
 
             return productRes;
         }
         [HttpPost]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
+        [AllowAnonymous]
         public async Task<ActionResult<ProductRespone>> CreateProduct([FromForm]ProductRequest request)
         {
             var product = _mapper.Map<Product>(request);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            if (request.ProductImg != null)
+            {
+                product.ProductImg = await SaveFile(request.ProductImg);
+            }
+            else
+            {
+                product.ProductImg = "add.jpg";
+            }
+
             product.ProductId = Guid.NewGuid().ToString();
             product.CreateDate = DateTime.Now;
             product.UpdateDate = DateTime.Now;
@@ -79,6 +99,7 @@ namespace Assignment.BackEnd.Controllers
             await _context.SaveChangesAsync();
 
             var productRes = _mapper.Map<ProductRespone>(product);
+            productRes.ProductImg = _storageService.GetFileUrl(productRes.ProductImg);
             return productRes;
         }
 
@@ -90,6 +111,15 @@ namespace Assignment.BackEnd.Controllers
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return NoContent();
+        }
+
+        private async Task<string> SaveFile(IFormFile file)
+        {
+            var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+            await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
+
+            return fileName;
         }
     }
 }
