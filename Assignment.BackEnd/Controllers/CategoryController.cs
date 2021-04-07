@@ -42,31 +42,49 @@ namespace Assignment.BackEnd.Controllers
             var cateRes = _mapper.Map<CategoryRespone>(cate);
             return cateRes;
         }
-        [HttpPost("{id}")]
+
+        [HttpPost()]
         [Authorize(Roles = "admin")]
         public async Task<ActionResult<CategoryRespone>> CreateCate([FromForm] CategoryRequest request)
         {
             var cate = _mapper.Map<Category>(request);
+            cate.CategoryId = Guid.NewGuid().ToString();
             _context.Categories.Add(cate);
             await _context.SaveChangesAsync();
 
             var cateRes = _mapper.Map<CategoryRespone>(cate);
             return cateRes;
         }
+
         [HttpPut("{id}")]
         [Authorize(Roles = "admin")]
-        public async Task<ActionResult<CategoryRespone>> UpdateCate(string id, [FromForm] CategoryRequest request)
+        public async Task<ActionResult<CategoryRequest>> UpdateCate(string id, [FromForm] CateUpdateRequest updateRequest)
         {
             var cate = await _context.Categories.FindAsync(id);
-            if(cate == null)
+
+            if (cate == null)
             {
                 return NotFound();
             }
-            _context.Entry(cate).CurrentValues.SetValues(request);
+
+            _context.Entry(cate).CurrentValues.SetValues(updateRequest);
+
             await _context.SaveChangesAsync();
-            var cateRes = _mapper.Map<CategoryRespone>(cate);
+
+            var cateRes = _mapper.Map<CategoryRequest>(cate);
+
             return cateRes;
         }
 
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "admin")]
+        public async Task<ActionResult<Category>> DeletCate(string id)
+        {
+            var cate = await _context.Categories.FindAsync(id);
+            _context.Categories.Remove(cate);
+            await _context.SaveChangesAsync();
+            return Accepted();
+
+        }
     }
 }

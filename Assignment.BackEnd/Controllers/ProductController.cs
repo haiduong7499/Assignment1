@@ -67,7 +67,7 @@ namespace Assignment.BackEnd.Controllers
 
             return productRes;
         }
-        [HttpPost("{id}")]
+        [HttpPost]
         [Authorize(Roles = "admin")]
         public async Task<ActionResult<ProductRespone>> CreateProduct([FromForm]ProductRequest request)
         {
