@@ -51,6 +51,8 @@ namespace Assignment.BackEnd.Controllers
         public async Task<ActionResult<ProductRespone>> GetProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
+            product.ProductImg = _storageService.GetFileUrl(product.ProductImg);
+
             if (product == null)
             {
                 return NotFound();

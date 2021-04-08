@@ -104,3 +104,5 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\System.IO.Pipelines.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Assignment.Shared.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Assignment.Shared.pdb
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Razor\Views\Shared\Components\Product\Default.cshtml.g.cs
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Razor\Views\Product\Detail.cshtml.g.cs

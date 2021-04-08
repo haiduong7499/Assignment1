@@ -1,0 +1,36 @@
+﻿@model Assignment.Shared.ProductRespone;
+
+
+<div class="col-lg-3 col-md-6">
+    <div class="single-product">
+        <a asp-controller="Product" asp-action="Detail" asp-route-id="@Model.ProductId"><img class="img-fluid" src="@Model.ProductImg" alt="@Model.NameProduct"></a>
+        <div class="product-details">
+            <h6>
+                @Model.NameProduct
+            </h6>
+            <div class="price">
+                <h6>@Convert.ToDecimal(Model.Price).ToString("#,##") VND</h6>
+            </div>
+            <p>@Model.Description</p>
+            <div class="prd-bottom">
+
+                <a href="" class="social-info">
+                    <span class="ti-bag"></span>
+                    <p class="hover-text">add to bag</p>
+                </a>
+                <a href="" class="social-info">
+                    <span class="lnr lnr-heart"></span>
+                    <p class="hover-text">Wishlist</p>
+                </a>
+                <a href="" class="social-info">
+                    <span class="lnr lnr-sync"></span>
+                    <p class="hover-text">compare</p>
+                </a>
+                <a href="" class="social-info">
+                    <span class="lnr lnr-move"></span>
+                    <p class="hover-text">view more</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
