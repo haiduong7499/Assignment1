@@ -96,3 +96,11 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\ref\Assignment.CustomerSite.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Assignment.CustomerSite.pdb
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Assignment.CustomerSite.genruntimeconfig.cache
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\System.IO.Pipelines.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Assignment.Shared.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\bin\Debug\net5.0\Assignment.Shared.pdb

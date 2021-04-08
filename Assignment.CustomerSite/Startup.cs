@@ -1,3 +1,4 @@
+using Assignment.CustomerSite.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,9 @@ namespace Assignment.CustomerSite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient();
+            services.AddTransient<ICategoryApiClient, CategoryApiClient>();
+            services.AddTransient<IProductApiClient, ProductApiClient>();
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = "Cookies";

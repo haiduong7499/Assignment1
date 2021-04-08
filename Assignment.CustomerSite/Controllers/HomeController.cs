@@ -14,16 +14,19 @@ namespace Assignment.CustomerSite.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ICategoryApiClient _cateApiClient;
-
-        public HomeController(ILogger<HomeController> logger, ICategoryApiClient cateApiClient)
+        private readonly IProductApiClient _productApiClient;
+        public HomeController(ILogger<HomeController> logger, ICategoryApiClient cateApiClient, IProductApiClient productApiClient)
         {
             _logger = logger;
             _cateApiClient = cateApiClient;
+            _productApiClient = productApiClient;
         }
 
         public async Task<IActionResult> Index()
         {
             var categories = await _cateApiClient.GetCategory();
+            var product = await _productApiClient.GetProducts();
+            ViewBag.Product = product;
             ViewBag.CateGories = categories;
             return View();
         }
