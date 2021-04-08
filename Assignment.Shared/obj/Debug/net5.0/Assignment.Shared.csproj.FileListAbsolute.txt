@@ -21,3 +21,4 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.Shared\obj\Debug\net5.0\Assi
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Shared\obj\Debug\net5.0\ref\Assignment.Shared.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.pdb
+E:\Year4\NashTech\New folder\Assignment1\Assignment.Shared\obj\Debug\net5.0\Assignment.Shared.csprojAssemblyReference.cache

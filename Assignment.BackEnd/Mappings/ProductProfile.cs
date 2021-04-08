@@ -7,8 +7,9 @@ namespace Assignment.BackEnd.Mappings
     {
         public ProductProfile()
         {
-            CreateMap<Product, ProductRespone>().ReverseMap();
-            CreateMap<Product, ProductRequest>().ReverseMap();
+            CreateMap<ProductRespone, Product>().ForPath(p => p.Category.Name, pm => pm.MapFrom(o => o.NameCategory))
+                .ReverseMap();
+            CreateMap<ProductRequest, Product>().ReverseMap();
         }
     }
 }

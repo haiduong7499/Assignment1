@@ -26,7 +26,7 @@
                                 @item.NameProduct
                             </h6>
                             <div class="price">
-                                <h6>@item.Price</h6>
+                                <h6>@Convert.ToDecimal(item.Price).ToString("#,##") VND</h6>
                             </div>
                             <p>@item.Description</p>
                             <div class="prd-bottom">

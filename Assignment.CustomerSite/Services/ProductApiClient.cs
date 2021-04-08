@@ -21,5 +21,13 @@ namespace Assignment.CustomerSite.Services
             respone.EnsureSuccessStatusCode();
             return await respone.Content.ReadAsAsync<IList<ProductRespone>>();
         }
+
+        public async Task<ProductRespone> GetProductByID(string id)
+        {
+            var product = _httpClientFactory.CreateClient();
+            var respone = await product.GetAsync("https://localhost:44303/api/Product"+id);
+            respone.EnsureSuccessStatusCode();
+            return await respone.Content.ReadAsAsync<ProductRespone>();
+        }
     }
 }

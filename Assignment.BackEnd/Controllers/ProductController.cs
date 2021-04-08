@@ -23,7 +23,7 @@ namespace Assignment.BackEnd.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IStorageService _storageService;
-        private IMapper _mapper;
+        private readonly IMapper _mapper;
         public ProductController(ApplicationDbContext context, IMapper mapper, IStorageService storageService)
         {
             _context = context;
@@ -35,7 +35,10 @@ namespace Assignment.BackEnd.Controllers
         [AllowAnonymous]
         public async Task<IEnumerable<ProductRespone>> GetProduct()
         {
-            var product = await _context.Products.ToListAsync();
+            var product = await _context.Products
+                .Include(product => product.Category)
+                .AsNoTracking()
+                .ToListAsync();
             foreach (var item in product)
             {
                 item.ProductImg = _storageService.GetFileUrl(item.ProductImg);
@@ -57,9 +60,50 @@ namespace Assignment.BackEnd.Controllers
 
             return productRes;
         }
+
+        [HttpGet("GetProductByID/{id}")]
+        [AllowAnonymous]
+        public async Task<ActionResult<ProductRespone>> GetProductByID(string id)
+        {
+            var product = await _context.Products.Include(product => product.Category)
+                .Where(product => product.ProductId.Equals(id))
+                .AsNoTracking()
+                .SingleAsync();
+            if (product == null)
+            {
+                return NotFound();
+            }
+            product.ProductImg = _storageService.GetFileUrl(product.ProductImg);
+            var productRes = _mapper.Map<ProductRespone>(product);
+            productRes.NameCategory = product.Category.Name;
+            return productRes;
+        }
+
+
+        [HttpGet("GetProductByCategory/{categoryId}")]
+        [AllowAnonymous]
+        public async Task<IEnumerable<ProductRespone>> GetProductByCategory(string categoryId)
+        {
+            var products = await _context.Products
+                .Include(p => p.Category)
+                .Where(p => p.CategoryID.Equals(categoryId))
+                .AsNoTracking()
+                .ToListAsync();
+
+            foreach (var item in products)
+            {
+                item.ProductImg = _storageService.GetFileUrl(item.ProductImg);
+            }
+
+            var productRes = _mapper.Map<IEnumerable<ProductRespone>>(products);
+
+            return productRes;
+        }
+
+
         [HttpPut("{id}")]
         [Authorize(Roles = "admin")]
-        public async Task<ActionResult<ProductRespone>> UpdateProduct(string id,[FromForm] ProductUpdateRequest updateRequest)
+        public async Task<ActionResult<ProductRespone>> UpdateProduct(string id, [FromForm] ProductUpdateRequest updateRequest)
         {
             var product = await _context.Products.FindAsync(id);
 
@@ -75,7 +119,7 @@ namespace Assignment.BackEnd.Controllers
         [HttpPost]
         //[Authorize(Roles = "admin")]
         [AllowAnonymous]
-        public async Task<ActionResult<ProductRespone>> CreateProduct([FromForm]ProductRequest request)
+        public async Task<ActionResult<ProductRespone>> CreateProduct([FromForm] ProductRequest request)
         {
             var product = _mapper.Map<Product>(request);
             if (product == null)
