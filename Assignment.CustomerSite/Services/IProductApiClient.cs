@@ -10,5 +10,6 @@ namespace Assignment.CustomerSite.Services
     {
         Task<IList<ProductRespone>> GetProducts();
         Task<ProductRespone> GetProductByID(string id);
+        Task<ProductRespone> GetProductByCate(string idCate);
     }
 }

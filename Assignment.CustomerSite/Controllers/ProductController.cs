@@ -24,5 +24,11 @@ namespace Assignment.CustomerSite.Controllers
 
             return View(product);
         }
+
+        public async Task<IActionResult> ShowProductByCate(string idCate)
+        {
+            var product = await _productApiClient.GetProductByCate(idCate);
+            return View(product);
+        }
     }
 }

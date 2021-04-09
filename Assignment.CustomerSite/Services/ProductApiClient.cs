@@ -25,7 +25,15 @@ namespace Assignment.CustomerSite.Services
         public async Task<ProductRespone> GetProductByID(string id)
         {
             var product = _httpClientFactory.CreateClient();
-            var respone = await product.GetAsync("https://localhost:44303/api/Product/"+id);
+            var respone = await product.GetAsync("https://localhost:44303/api/Product/GetProductByID/" + id);
+            respone.EnsureSuccessStatusCode();
+            return await respone.Content.ReadAsAsync<ProductRespone>();
+        }
+
+        public async Task<ProductRespone> GetProductByCate(string idCate)
+        {
+            var product = _httpClientFactory.CreateClient();
+            var respone = await product.GetAsync("https://localhost:44303/api/Product/GetProductByCategory/" + idCate);
             respone.EnsureSuccessStatusCode();
             return await respone.Content.ReadAsAsync<ProductRespone>();
         }
