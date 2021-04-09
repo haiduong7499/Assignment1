@@ -14,8 +14,10 @@ namespace Assignment.CustomerSite.Controllers
         {
             _productApiClient = productApiClient;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int id)
         {
+            var productCate = await _productApiClient.GetProductByCate(id);
+            ViewBag.ProductCate = productCate;
             return View();
         }
         public async Task<IActionResult> Detail(string id)
@@ -25,8 +27,9 @@ namespace Assignment.CustomerSite.Controllers
             return View(product);
         }
 
-        public async Task<IActionResult> ShowProductByCate(string idCate)
+        public async Task<IActionResult> ShowProductByCate(int idCate)
         {
+
             var product = await _productApiClient.GetProductByCate(idCate);
             return View(product);
         }

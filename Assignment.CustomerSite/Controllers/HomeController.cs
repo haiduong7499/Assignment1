@@ -24,10 +24,14 @@ namespace Assignment.CustomerSite.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var categories = await _cateApiClient.GetCategory();
+            var cate = await _cateApiClient.GetCategory();
             var product = await _productApiClient.GetProducts();
+            var productCate = await _productApiClient.GetProductByCate(2);
+            var productCate1 = await _productApiClient.GetProductByCate(1);
+            ViewBag.ProductCate = productCate;
+            ViewBag.ProductCate1 = productCate1;
             ViewBag.Product = product;
-            ViewBag.CateGories = categories;
+            ViewBag.Cate = cate;
             return View();
         }
 

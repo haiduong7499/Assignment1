@@ -30,12 +30,12 @@ namespace Assignment.CustomerSite.Services
             return await respone.Content.ReadAsAsync<ProductRespone>();
         }
 
-        public async Task<ProductRespone> GetProductByCate(string idCate)
+        public async Task<IList<ProductRespone>> GetProductByCate(int idCate)
         {
             var product = _httpClientFactory.CreateClient();
             var respone = await product.GetAsync("https://localhost:44303/api/Product/GetProductByCategory/" + idCate);
             respone.EnsureSuccessStatusCode();
-            return await respone.Content.ReadAsAsync<ProductRespone>();
+            return await respone.Content.ReadAsAsync<IList<ProductRespone>>();
         }
     }
 }

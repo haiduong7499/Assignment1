@@ -15,11 +15,18 @@
         </div>
         <div class="row">
             <!-- single product -->
-            @foreach (var item in ViewBag.Product)
+            @foreach (var item in ViewBag.ProductCate)
             {
-                @await Component.InvokeAsync("RelatedProduct", item)
-            }
 
+                @await Component.InvokeAsync("RelatedProduct", item);
+            }
+        </div>
+        <div class="row">
+            <!-- single product -->
+            @foreach (var item in ViewBag.ProductCate1)
+            {
+                @await Component.InvokeAsync("RelatedProduct", item);
+            }
         </div>
     </div>
 </div>

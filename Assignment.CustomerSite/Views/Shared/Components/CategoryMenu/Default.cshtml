@@ -1,0 +1,6 @@
+﻿@model Assignment.Shared.CategoryRespone
+
+@foreach (var cate in Model)
+{
+    <li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="Index" asp-route-id="@cate.CategoryId">@cate.Name</a></li>
+}
