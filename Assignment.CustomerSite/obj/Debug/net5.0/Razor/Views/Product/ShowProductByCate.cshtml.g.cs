@@ -26,8 +26,15 @@ using Assignment.CustomerSite.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\Views\_ViewImports.cshtml"
+using Assignment.Shared;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"603d673cd0d60e01a894836aaa248dd47cf6cbd0", @"/Views/Product/ShowProductByCate.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"410b674406e4913182a5ed418c61463ee897c59f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"45384b9193ea96b127fb00e8944c63baf981dbd6", @"/Views/_ViewImports.cshtml")]
     public class Views_Product_ShowProductByCate : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Assignment.Shared.ProductRespone>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Product", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -57,7 +64,7 @@ using Assignment.CustomerSite.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n\r\n<div class=\"col-lg-3 col-md-6\">\r\n    <div class=\"single-product\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "603d673cd0d60e01a894836aaa248dd47cf6cbd03925", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "603d673cd0d60e01a894836aaa248dd47cf6cbd04122", async() => {
                 WriteLiteral("<img class=\"img-fluid\"");
                 BeginWriteAttribute("src", " src=\"", 233, "\"", 256, 1);
 #nullable restore

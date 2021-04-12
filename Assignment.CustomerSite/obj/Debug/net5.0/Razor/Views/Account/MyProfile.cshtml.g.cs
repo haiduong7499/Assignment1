@@ -27,6 +27,13 @@ using Assignment.CustomerSite.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 3 "E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\Views\_ViewImports.cshtml"
+using Assignment.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\Views\Account\MyProfile.cshtml"
 using Microsoft.AspNetCore.Authentication;
 
@@ -41,7 +48,7 @@ using Microsoft.Extensions.Configuration;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a9f7471a5e8be9015c9620b51c6df25df062c29", @"/Views/Account/MyProfile.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"410b674406e4913182a5ed418c61463ee897c59f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"45384b9193ea96b127fb00e8944c63baf981dbd6", @"/Views/_ViewImports.cshtml")]
     public class Views_Account_MyProfile : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

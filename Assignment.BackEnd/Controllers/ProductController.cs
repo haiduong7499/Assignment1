@@ -65,7 +65,7 @@ namespace Assignment.BackEnd.Controllers
 
         [HttpGet("GetProductByID/{id}")]
         [AllowAnonymous]
-        public async Task<ActionResult<ProductRespone>> GetProductByID(int id)
+        public async Task<ActionResult<ProductRespone>> GetProductByID(string id)
         {
             var product = await _context.Products.Include(product => product.Category)
                 .Where(product => product.ProductId.Equals(id))
