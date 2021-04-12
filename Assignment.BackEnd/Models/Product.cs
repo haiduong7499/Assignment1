@@ -17,5 +17,6 @@ namespace Assignment.BackEnd.Models
         public DateTime UpdateDate { get; set; }
         public string CategoryID { get; set; }
         public Category Category { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
     }
 }
