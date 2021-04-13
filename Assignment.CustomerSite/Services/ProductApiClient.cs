@@ -37,5 +37,13 @@ namespace Assignment.CustomerSite.Services
             respone.EnsureSuccessStatusCode();
             return await respone.Content.ReadAsAsync<IList<ProductRespone>>();
         }
+
+        public async Task<IList<RatingRespone>> AddRating(RatingRequest request)
+        {
+            var product = _httpClientFactory.CreateClient();
+            var respone = await product.PostAsJsonAsync("https://localhost:44303/api/Rating", request);
+            respone.EnsureSuccessStatusCode();
+            return await respone.Content.ReadAsAsync<IList<RatingRespone>>();
+        }
     }
 }

@@ -80,14 +80,11 @@ namespace Assignment.BackEnd.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ArticleProductId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Articles")
-                        .HasColumnType("int");
-
                     b.Property<string>("Comments")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
@@ -97,7 +94,7 @@ namespace Assignment.BackEnd.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("ArticleProductId");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Ratings");
                 });
@@ -316,11 +313,11 @@ namespace Assignment.BackEnd.Migrations
 
             modelBuilder.Entity("Assignment.BackEnd.Models.Rating", b =>
                 {
-                    b.HasOne("Assignment.BackEnd.Models.Product", "Article")
+                    b.HasOne("Assignment.BackEnd.Models.Product", "Product")
                         .WithMany("Ratings")
-                        .HasForeignKey("ArticleProductId");
+                        .HasForeignKey("ProductId");
 
-                    b.Navigation("Article");
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

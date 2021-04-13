@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assignment.BackEnd.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210407041545_db1")]
+    [Migration("20210413071433_db1")]
     partial class db1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,6 +73,32 @@ namespace Assignment.BackEnd.Migrations
                     b.HasIndex("CategoryID");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Assignment.BackEnd.Models.Rating", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("PublishDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Rate")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("Assignment.BackEnd.Models.User", b =>
@@ -287,6 +313,15 @@ namespace Assignment.BackEnd.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Assignment.BackEnd.Models.Rating", b =>
+                {
+                    b.HasOne("Assignment.BackEnd.Models.Product", "Product")
+                        .WithMany("Ratings")
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -341,6 +376,11 @@ namespace Assignment.BackEnd.Migrations
             modelBuilder.Entity("Assignment.BackEnd.Models.Category", b =>
                 {
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Assignment.BackEnd.Models.Product", b =>
+                {
+                    b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618
         }

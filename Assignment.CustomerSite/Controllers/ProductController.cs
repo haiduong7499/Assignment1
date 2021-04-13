@@ -1,4 +1,5 @@
 ﻿using Assignment.CustomerSite.Services;
+using Assignment.Shared;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,15 @@ namespace Assignment.CustomerSite.Controllers
         public async Task<IActionResult> Detail(string id)
         {
             var product = await _productApiClient.GetProductByID(id);
+            ViewBag.Product = id;
+            return View(product);
+        }
+
+        [HttpPost("/Rating/{id}")]
+        public async Task<IActionResult> SubmitRating(string id, [FromForm] RatingRequest request)
+        {
+            request.ProductID = id;
+            var product = await _productApiClient.AddRating(request);
 
             return View(product);
         }
