@@ -12,8 +12,7 @@ namespace Assignment.BackEnd.Mappings
     {
         public RatingProfile()
         {
-            CreateMap<RatingRespone, Rating>().ForPath(p => p.Product.ProductId, pm => pm.MapFrom(o => o.ProductID))
-                .ReverseMap();
+            CreateMap<RatingRespone, Rating>().ReverseMap();
             CreateMap<RatingRequest, Rating>().ReverseMap();
 
         }

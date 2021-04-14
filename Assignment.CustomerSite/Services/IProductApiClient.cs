@@ -12,6 +12,8 @@ namespace Assignment.CustomerSite.Services
         Task<ProductRespone> GetProductByID(string id);
         Task<IList<ProductRespone>> GetProductByCate(int idCate);
 
-        Task<IList<RatingRespone>> AddRating(RatingRequest request);
+        Task<IList<RatingRespone>> GetRating(string id);
+
+        Task<RatingRequest> PostRating(RatingRequest ratingRequest);
     }
 }

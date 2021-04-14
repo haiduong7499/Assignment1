@@ -110,3 +110,4 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Razor\Views\Product\ShowProductByCate.cshtml.g.cs
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs
 E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
+E:\Year4\NashTech\New folder\Assignment1\Assignment.CustomerSite\obj\Debug\net5.0\Razor\Views\Shared\Components\Rating\Default.cshtml.g.cs

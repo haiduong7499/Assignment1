@@ -37,16 +37,20 @@ namespace Assignment.BackEnd.Controllers
 
         [HttpGet("{id}")]
         [AllowAnonymous]
-        public async Task<ActionResult<RatingRespone>> GetRating(string id)
+        public async Task<IEnumerable<RatingRespone>> GetRating(string id)
         {
-            var rate = await _context.Categories.FindAsync(id);
-            var rateRes = _mapper.Map<RatingRespone>(rate);
+            var rate = await _context.Ratings
+                .Include(rate => rate.Product)
+                .Where(rate=> rate.ProductId.Equals(id))
+                .AsNoTracking()
+                .ToListAsync();
+            var rateRes = _mapper.Map<IEnumerable<RatingRespone>>(rate);
             return rateRes;
         }
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<ActionResult<RatingRespone>> CreateRating( RatingRequest request)
+        public async Task<ActionResult<RatingRespone>> CreateRating(RatingRequest request)
         {
             var rate = _mapper.Map<Rating>(request);
             _context.Ratings.Add(rate);
