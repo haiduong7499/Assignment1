@@ -5,30 +5,36 @@ import {
     NavbarToggler,
     Nav,
     NavItem,
-    NavLink,
-    Button
+    Button,
+    NavLink
 } from 'reactstrap';
-
+import { Link } from 'react-router-dom';
 const NavbarComponent = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
-
     return (
         <div>
-            <Navbar color="light" light expand="md">
+            <Navbar color="#5F9EA0" light expand="md">
                 <img src="./logo.png"></img>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
-                        <NavItem>
-                            <NavLink href="#">Category</NavLink>
+                        <NavItem >
+                            <NavLink><Link className="text-decoration-none" to="/categories">
+                                Category
+                            </Link>
+                        </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">Product</NavLink>
+                            <NavLink><Link className="text-decoration-none" to="/products">
+                                Products
+                            </Link></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">User</NavLink>
+                            <NavLink><Link className="text-decoration-none" to="/users">
+                                Users
+                            </Link></NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
