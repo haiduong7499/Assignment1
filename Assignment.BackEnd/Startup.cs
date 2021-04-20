@@ -34,7 +34,7 @@ namespace Assignment.BackEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var clientUrls = new Dictionary<string, string>
+            clientUrls = new Dictionary<string, string>
             {
                 ["CustomerSite"] = Configuration["ClientUrl:CustomerSite"],
                 ["Backend"] = Configuration["ClientUrl:Backend"],
