@@ -9,16 +9,16 @@ namespace Assignment.CustomerSite.Services
 {
     public class CategoryApiClient: ICategoryApiClient
     {
-        private readonly IHttpClientFactory _clientFactory;
+        private readonly HttpClient _client;
 
-        public CategoryApiClient(IHttpClientFactory clientFactory)
+        public CategoryApiClient(HttpClient client)
         {
-            _clientFactory = clientFactory;
+            _client = client;
         }
         public async Task<IList<CategoryRespone>> GetCategory()
         {
-            var client = _clientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:44303/api/Category");
+            
+            var response = await _client.GetAsync("api/Category");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsAsync<IList<CategoryRespone>>();
         }

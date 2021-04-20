@@ -14,64 +14,50 @@ namespace Assignment.CustomerSite.Services
 {
     public class ProductApiClient: IProductApiClient
     {
-        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly HttpClient _client;
 
-        public ProductApiClient(IHttpClientFactory httpClientFactory)
+        public ProductApiClient(HttpClient client)
         {
 
-            _httpClientFactory = httpClientFactory;
+            _client = client;
         }
         public async Task<IList<ProductRespone>> GetProducts()
         {
-            var product =_httpClientFactory.CreateClient();
-            var respone = await product.GetAsync("https://localhost:44303/api/Product");
+            
+            var respone = await _client.GetAsync("api/Product");
             respone.EnsureSuccessStatusCode();
             return await respone.Content.ReadAsAsync<IList<ProductRespone>>();
         }
 
         public async Task<ProductRespone> GetProductByID(string id)
         {
-            var product = _httpClientFactory.CreateClient();
-            var respone = await product.GetAsync("https://localhost:44303/api/Product/GetProductByID/" + id);
+            var respone = await _client.GetAsync("api/Product/GetProductByID/" + id);
             respone.EnsureSuccessStatusCode();
             return await respone.Content.ReadAsAsync<ProductRespone>();
         }
 
         public async Task<IList<ProductRespone>> GetProductByCate(int idCate)
         {
-            var product = _httpClientFactory.CreateClient();
-            var respone = await product.GetAsync("https://localhost:44303/api/Product/GetProductByCategory/" + idCate);
+            var respone = await _client.GetAsync("api/Product/GetProductByCategory/" + idCate);
             respone.EnsureSuccessStatusCode();
             return await respone.Content.ReadAsAsync<IList<ProductRespone>>();
         }
 
-        //public async Task<IList<RatingRespone>> AddRating(RatingRequest request)
-        //{
-        //    var product = _httpClientFactory.CreateClient();
-        //    var respone = await product.PostAsJsonAsync("https://localhost:44303/api/Rating", request);
-        //    respone.EnsureSuccessStatusCode();
-        //    return await respone.Content.ReadAsAsync<IList<RatingRespone>>();
-        //}
-
-
         public async Task<IList<RatingRespone>> GetRating(string id)
         {
-            var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:44303/api/Rating/" + id);
+            var response = await _client.GetAsync("api/Rating/" + id);
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsAsync<IList<RatingRespone>>();
         }
 
         public async Task<RatingRequest> PostRating(RatingRequest ratingRequest)
         {
-            var client = _httpClientFactory.CreateClient();
-            //var accessToken = await _httpContextAccessor.HttpContext.GetTokenAsync("access_token");
-            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
 
             var json = JsonConvert.SerializeObject(ratingRequest);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync("https://localhost:44303/api/Rating", data);
+            var response = await _client.PostAsync("api/Rating", data);
 
             response.EnsureSuccessStatusCode();
 
