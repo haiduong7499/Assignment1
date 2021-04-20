@@ -2,9 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 //page comp
 import Dashboard from "./pages/dashboard.js";
-import Products from "./pages/products.js";
-import Category from "./pages/categories.js";
-import Users from "./pages/users.js";
+import Products from "./products/products_page.js";
+import Category from "./categories/categories_page.js";
+import Users from "./users/users_page.js";
 import NotMatch from "./pages/notmatch.js";
 
 export default function Routes(props) {
@@ -13,7 +13,7 @@ export default function Routes(props) {
       <Route exact path="/">
         <Dashboard />
       </Route>
-      <Route path="/products">
+      <Route path="/products_page">
         <Products />
       </Route>
       <Route path="/categories">

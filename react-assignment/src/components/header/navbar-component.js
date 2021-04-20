@@ -27,7 +27,7 @@ const NavbarComponent = (props) => {
                         </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink><Link className="text-decoration-none" to="/products">
+                            <NavLink><Link className="text-decoration-none" to="/products_page">
                                 Products
                             </Link></NavLink>
                         </NavItem>
