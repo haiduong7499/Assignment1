@@ -102,3 +102,4 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Mic
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\System.IO.Pipelines.dll
+E:\Year4\NashTech\New folder\Assignment1\Assignment.BackEnd\bin\Debug\net5.0\web.config

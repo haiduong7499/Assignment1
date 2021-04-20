@@ -19,7 +19,7 @@ namespace Assignment.BackEnd.IdentityServer
                   new ApiScope("assignment.api", "Assignment Shop API")
              };
 
-        public static IEnumerable<Client> Clients =>
+        public static IEnumerable<Client> Clients(Dictionary<string, string> clientUrls) =>
             new List<Client>
             {
                 // machine to machine client
@@ -41,9 +41,10 @@ namespace Assignment.BackEnd.IdentityServer
 
                     AllowedGrantTypes = GrantTypes.Code,
 
-                    RedirectUris = { "https://localhost:44379/signin-oidc" },
-
-                    PostLogoutRedirectUris = { "https://localhost:44379/signout-callback-oidc" },
+                    //RedirectUris = { "https://localhost:44379/signin-oidc" },
+                    RedirectUris = { $"{clientUrls["CustomerSite"]}/signin-oidc" },
+                    PostLogoutRedirectUris = { $"{clientUrls["CustomerSite"]}/signout-callback-oidc" },
+                    //PostLogoutRedirectUris = { "https://localhost:44379/signout-callback-oidc" },
 
                     AllowedScopes = new List<string>
                     {
@@ -62,9 +63,9 @@ namespace Assignment.BackEnd.IdentityServer
                     RequireConsent = false,
                     RequirePkce = true,
 
-                    RedirectUris =           { $"https://localhost:44303/swagger/oauth2-redirect.html" },
-                    PostLogoutRedirectUris = { $"https://localhost:44303/swagger/oauth2-redirect.html" },
-                    AllowedCorsOrigins =     { $"https://localhost:44303" },
+                    RedirectUris =           { $"{clientUrls["Backend"]}/swagger/oauth2-redirect.html" },
+                    PostLogoutRedirectUris = { $"{clientUrls["Backend"]}/swagger/oauth2-redirect.html" },
+                    AllowedCorsOrigins =     { $"{clientUrls["Backend"]}" },
 
                     AllowedScopes = new List<string>
                     {

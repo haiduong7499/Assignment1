@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkdrxOMABB0+zzuGfuLf4wQAAAAACAAAAAAAQZgAAAAEAACAAAAApp4n629SOJIU+WRTB0Coc63T5MLQh/gfi6P+plRTjcAAAAAAOgAAAAAIAACAAAAC0T6GYLkwMV/AavNJtNTPovd92/0ZSbqcKTdaNwyoaW4AAAADstrZ4HLA7MC+n4vhdUTB+lrJ12CwUha5Kh6ufJCDddQFyLkHdGghuV92tvdEgrZ+fmKd+/0eZmxDTtsys45RR1XVyKwxBg669N1x42TrzMpLmFNzAwJqRUQLvpi3xy7UBy37oFxlyyJ8YTBq5fq6cbt6cQarHJGa92aWmlcQ8j0AAAAAOYwjdbLZWxgPwhgjMBUWU+9t66uKxtI18FHZhzlNMjQapBk4/t/2DgvTFLg21L9yg9sYfvapsiCEYNzfVFDUS</EncryptedPassword>
+    <History>True|2021-04-20T09:26:45.5137101Z;True|2021-04-20T15:38:05.5682054+07:00;True|2021-04-20T15:12:49.0776311+07:00;False|2021-04-20T15:07:49.2015446+07:00;False|2021-04-20T15:05:20.8033404+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:mikeassignment.database.windows.net,1433%3bInitial Catalog=AssignmentDb%3bPersist Security Info=False%3bUser ID=haiduong%3bPassword=Duong74%28%28%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Assignment.BackEnd.Data.ApplicationDbContext">
+      <Value>Server=tcp:mikeassignment.database.windows.net,1433%3bInitial Catalog=AssignmentDb%3bPersist Security Info=False%3bUser ID=haiduong%3bPassword=Duong74%28%28%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

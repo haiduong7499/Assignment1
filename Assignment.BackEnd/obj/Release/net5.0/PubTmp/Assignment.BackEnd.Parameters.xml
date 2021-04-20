@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="haiduongassignment" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Year4\\NashTech\\New\ folder\\Assignment1\\Assignment\.BackEnd\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Assignment.BackEnd.Data.ApplicationDbContext" description="" value="Server=tcp:mikeassignment.database.windows.net,1433;Initial Catalog=AssignmentDb;Persist Security Info=False;User ID=haiduong;Password=Duong74((;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^E:\\Year4\\NashTech\\New\ folder\\Assignment1\\Assignment\.BackEnd\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\Assignment\.BackEnd\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>
