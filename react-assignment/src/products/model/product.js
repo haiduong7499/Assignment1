@@ -6,12 +6,9 @@ export const ProductContext = createContext({});
 const ProductContextProvider = ({children}) => {
     const [productItems, setProductItems] = useState([]);
 
-    useEffect(() =>{
-        const fetchData = async () =>{
-            setProductItems(await GetProduct());
-        };
-        fetchData();
-    },[]);
+    useEffect(() => {
+       
+    }, []);
 
     return (
         <ProductContext.Provider values={{
