@@ -40,12 +40,8 @@ namespace Assignment.BackEnd.IdentityServer
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
                     AllowedGrantTypes = GrantTypes.Code,
-
-                    //RedirectUris = { "https://localhost:44379/signin-oidc" },
                     RedirectUris = { $"{clientUrls["CustomerSite"]}/signin-oidc" },
                     PostLogoutRedirectUris = { $"{clientUrls["CustomerSite"]}/signout-callback-oidc" },
-                    //PostLogoutRedirectUris = { "https://localhost:44379/signout-callback-oidc" },
-
                     AllowedScopes = new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

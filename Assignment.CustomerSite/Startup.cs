@@ -27,8 +27,6 @@ namespace Assignment.CustomerSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
-            //services.AddTransient<ICategoryApiClient, CategoryApiClient>();
-            //services.AddTransient<IProductApiClient, ProductApiClient>();
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = "Cookies";
