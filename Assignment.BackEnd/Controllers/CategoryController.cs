@@ -44,7 +44,7 @@ namespace Assignment.BackEnd.Controllers
         }
 
         [HttpPost()]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<ActionResult<CategoryRespone>> CreateCate([FromForm] CategoryRequest request)
         {
             var cate = _mapper.Map<Category>(request);
@@ -57,7 +57,7 @@ namespace Assignment.BackEnd.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<ActionResult<CategoryRequest>> UpdateCate(string id, [FromForm] CateUpdateRequest updateRequest)
         {
             var cate = await _context.Categories.FindAsync(id);
@@ -77,7 +77,7 @@ namespace Assignment.BackEnd.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<ActionResult<Category>> DeletCate(string id)
         {
             var cate = await _context.Categories.FindAsync(id);

@@ -104,7 +104,7 @@ namespace Assignment.BackEnd.Controllers
 
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<ActionResult<ProductRespone>> UpdateProduct(string id, [FromForm] ProductUpdateRequest updateRequest)
         {
             var product = await _context.Products.FindAsync(id);
@@ -150,7 +150,7 @@ namespace Assignment.BackEnd.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<ActionResult<ProductRespone>> DeleteProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
-import {host} from '../config.js';
+import { host } from '../config.js';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -8,19 +8,23 @@ const Product = () => {
     const [productItems, setProduct] = useState([]);
 
     useEffect(() => {
-        axios.get(host +"/api/Product") 
-        .then(response => {
-            setProduct(response.data);
-        }).catch((error) => {
-            console.log('get products err', error);
-        });
+        axios.get(host + "/api/Product")
+            .then(response => {
+                setProduct(response.data);
+            }).catch((error) => {
+                console.log('get products err', error);
+            });
     }, []);
 
     return (
-        
         <>
             <h2 className="text-center p-3">Product</h2>
-            <Link to='/createproduct_form'><Button color="success" className='mb-2 ml-2'>Create Product</Button></Link>
+            <Button color="success" className='mb-2 ml-2'>
+                <Link className="text-decoration-none text-white"
+                    to= '/createproduct_form'>
+                    Create Product
+                </Link>
+            </Button>
 
             <Table dark>
                 <thead>
