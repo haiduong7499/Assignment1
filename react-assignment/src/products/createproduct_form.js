@@ -50,7 +50,6 @@ const CreateProduct = (props) => {
             axios.post(host + "/api/Product", formData)
                 .then(response => {
                     setProduct(response.data);
-                    console.log(response.data);
                 }).catch((error) => {
                     console.log('post products err', error);
                 });

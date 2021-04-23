@@ -129,7 +129,7 @@ namespace Assignment.BackEnd
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors(options => options.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod());
 
             app.UseRouting();
 

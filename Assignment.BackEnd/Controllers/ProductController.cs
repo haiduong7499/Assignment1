@@ -151,6 +151,7 @@ namespace Assignment.BackEnd.Controllers
 
         [HttpDelete("{id}")]
         //[Authorize(Roles = "admin")]
+        [AllowAnonymous]
         public async Task<ActionResult<ProductRespone>> DeleteProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
