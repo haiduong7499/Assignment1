@@ -12,7 +12,7 @@ namespace Assignment.BackEnd.Models
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string ProductImg { get; set; }
-        public int Rated { get; set; }
+        public int Rate { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime UpdateDate { get; set; }
         public string CategoryID { get; set; }

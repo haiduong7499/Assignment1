@@ -11,7 +11,7 @@ namespace Assignment.BackEnd.Models
         public string Comments { get; set; }
         public DateTime PublishDate { get; set; }
         public string ProductId { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
         public int Rate { get; set; }
     }
 }
