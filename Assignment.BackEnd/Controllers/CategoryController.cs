@@ -14,7 +14,7 @@ namespace Assignment.BackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize("Bearer")]
+    //[Authorize("Bearer")]
     public class CategoryController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -48,7 +48,6 @@ namespace Assignment.BackEnd.Controllers
         public async Task<ActionResult<CategoryRespone>> CreateCate([FromForm] CategoryRequest request)
         {
             var cate = _mapper.Map<Category>(request);
-            cate.CategoryId = Guid.NewGuid().ToString();
             _context.Categories.Add(cate);
             await _context.SaveChangesAsync();
 

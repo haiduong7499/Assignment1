@@ -9,6 +9,7 @@ namespace Assignment.Shared
 {
     public class CategoryRequest
     {
+        public string CategoryId { get; set; }
         [Required]
         [MaxLength(30)]
         public string Name { get; set; }
