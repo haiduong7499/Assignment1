@@ -57,7 +57,7 @@ const Product = () => {
                                 <td>
                                     <img src={product.productImg} alt={product.nameProduct} width="150px" height="150px"></img>
                                 </td>
-                                <td>{product.rated}</td>
+                                <td>{product.rate}</td>
                                 <td>
                                     <Button color="danger" className="mr-2" onClick={() => handleDelete(product.productId)}>
                                         <TrashFill color="white" size={20} />

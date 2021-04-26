@@ -12,11 +12,11 @@ namespace Assignment.BackEnd.Models
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string ProductImg { get; set; }
-        public int Rate { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime UpdateDate { get; set; }
         public string CategoryID { get; set; }
         public Category Category { get; set; }
-        public ICollection<Rating> Ratings { get; set; }
+        public virtual ICollection<Rating> Ratings { get; set; }
+        public int Rate { get; set; }
     }
 }

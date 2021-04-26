@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Assignment.BackEnd.Migrations
 {
-    public partial class db1 : Migration
+    public partial class cs1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -175,10 +175,10 @@ namespace Assignment.BackEnd.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     ProductImg = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Rated = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CategoryID = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    CategoryID = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Rate = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

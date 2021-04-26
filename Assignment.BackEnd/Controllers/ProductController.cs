@@ -155,9 +155,15 @@ namespace Assignment.BackEnd.Controllers
         public async Task<ActionResult<ProductRespone>> DeleteProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            var productRes = _mapper.Map<ProductRespone>(product);
+
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
-            return NoContent();
+            return productRes;
         }
 
         private async Task<string> SaveFile(IFormFile file)

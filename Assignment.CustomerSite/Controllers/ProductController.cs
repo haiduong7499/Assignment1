@@ -32,15 +32,6 @@ namespace Assignment.CustomerSite.Controllers
             return View(product);
         }
 
-        //[HttpPost("/Rating/{id}")]
-        //public async Task<IActionResult> SubmitRating(string id, [FromForm] RatingRequest request)
-        //{
-        //    request.ProductID = id;
-        //    var product = await _productApiClient.AddRating(request);
-
-        //    return View(product);
-        //}
-
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> PostReview(int rate, string comments, string productId)
@@ -50,7 +41,7 @@ namespace Assignment.CustomerSite.Controllers
                 
                 Comments = comments,
                 Rate = rate,
-                ProductID = productId
+                ProductId = productId
             };
 
             await _productApiClient.PostRating(review);
