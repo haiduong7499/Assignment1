@@ -57,6 +57,10 @@ namespace Assignment.BackEnd.Controllers
             rate.PublishDate = DateTime.Now;
             await _context.SaveChangesAsync();
 
+            var sumRating = _context.Ratings.Where(x => x.ProductId.Equals(rate.ProductId)).Average(p => p.Rate);
+            var product = await _context.Products.FindAsync(rate.ProductId);
+            product.Rate = Convert.ToInt32(sumRating);
+            await _context.SaveChangesAsync();
             var rateRes = _mapper.Map<RatingRespone>(rate);
             return rateRes;
         }
