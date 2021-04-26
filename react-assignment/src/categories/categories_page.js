@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
 import {host} from '../config.js';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom';
 const Category = () => {
     const [categoryItems, setCategory] = useState([]);
 
@@ -19,7 +19,12 @@ const Category = () => {
         
         <>
             <h2 className="text-center p-3">Category</h2>
-            <Button color="success" className='mb-2 ml-2'>Create Category</Button>
+            <Button color="success" className='mb-2 ml-2'>
+            <Link className="text-decoration-none text-white"
+                    to='/createcategory_form'>
+                    Create Category
+                </Link>
+            </Button>
 
             <Table dark>
                 <thead>

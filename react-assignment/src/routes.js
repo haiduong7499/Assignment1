@@ -7,6 +7,7 @@ import Category from "./categories/categories_page.js";
 import Users from "./users/users_page.js";
 import NotMatch from "./pages/notmatch.js";
 import CreateProduct from './products/createproduct_form.js';
+import CreateCategory from './categories/createcategory_form';
 export default function Routes(props) {
   return (
     <Switch>
@@ -24,6 +25,9 @@ export default function Routes(props) {
       </Route>
       <Route path="/createproduct_form">
         <CreateProduct />
+      </Route>
+      <Route path="/createcategory_form">
+        <CreateCategory />
       </Route>
       <Route path="*">
         <NotMatch />
