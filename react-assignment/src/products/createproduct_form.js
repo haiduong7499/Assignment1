@@ -29,7 +29,7 @@ const CreateProduct = (props) => {
             nameProduct: '',
             description: '',
             price: 0,
-            categoryId: '',
+            categoryId: '1',
             ProductImg: null,
         },
         onSubmit: (values, action) => {

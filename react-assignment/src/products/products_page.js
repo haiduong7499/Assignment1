@@ -1,42 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
 import { TrashFill } from 'react-bootstrap-icons'
-import { host } from '../config.js';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {fetchProductData, DeleteProduct} from '../service/product.js'
 
 const Product = () => {
     const [productItems, setProduct] = useState([]);
 
-    useEffect(() => {
-        fetchProductData();
-    }, []);
+    const handleDelete = async (id) => {
+        const result = await DeleteProduct(id);
 
-    const fetchProductData = () =>{
-        axios.get(host + "/api/Product")
-            .then(response => {
-                setProduct(response.data);
-                console.log(response.data)
-            }).catch((error) => {
-                console.log('get products err', error);
-            });
-    }
-
-    const DeleteProduct = (id) => {
-        return axios({
-            method: "delete",
-            url: host + "/api/Product/" + id,
-        })
-            .then((response) => {
-                fetchProductData();
-                console.log(response.data)
-            })
-            .catch((error) => {
-                console.log(error.response);
-                return null;
-            });
+        if (result) {
+            (async () => {
+                const products = await fetchProductData();
+                setProduct(products)
+            })();
+        }
     };
 
+    useEffect(() => {
+        (async () => {
+            const products = await fetchProductData();
+            setProduct(products)
+        })();
+    }, []);
 
     return (
         <>
@@ -72,7 +59,7 @@ const Product = () => {
                                 </td>
                                 <td>{product.rated}</td>
                                 <td>
-                                    <Button color="danger" className="mr-2" onClick={async () => await DeleteProduct(product.productId)}>
+                                    <Button color="danger" className="mr-2" onClick={() => handleDelete(product.productId)}>
                                         <TrashFill color="white" size={20} />
                                     </Button>
                                 </td>
