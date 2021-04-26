@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
 import { TrashFill } from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom';
-import {fetchProductData, DeleteProduct} from '../service/product.js'
+import { fetchProductData, DeleteProduct } from '../service/product.js'
 
 const Product = () => {
     const [productItems, setProduct] = useState([]);
 
-    const fetchData = () =>{
+    const fetchData = () => {
         (async () => {
             const products = await fetchProductData();
             setProduct(products)

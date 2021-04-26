@@ -1,33 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
-import { host } from '../config.js';
-import {TrashFill} from 'react-bootstrap-icons';
-import axios from 'axios';
+import { TrashFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
+import {fetchCategoryData, DeleteCategory} from '../service/category';
+
 const Category = () => {
     const [categoryItems, setCategory] = useState([]);
 
-    const fetchCategoryData  = () => {
-        axios.get(host + "/api/Category")
-            .then(response => {
-                setCategory(response.data);
-            }).catch((error) => {
-                console.log('get category err', error);
-            });
+    const fetchData = () => {
+        (async () => {
+            const category = await fetchCategoryData();
+            setCategory(category);
+        })();
     }
-    useEffect(() => {
-        fetchCategoryData();
-    }, []);
 
-    const DeleteCategory = (id) => {
-        axios.delete(host + "/api/Category/" + id)
-            .then(response => {
-                fetchCategoryData();
-                setCategory(response.data);
-            }).catch((error) => {
-                console.log('get category err', error);
-            });
+    const handleDelete = async (id) =>{
+        const result = await DeleteCategory(id);
+        if(result){
+            fetchData();
+        }
     }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
     return (
 
         <>
@@ -55,7 +51,7 @@ const Category = () => {
                                 <td>{category.name}</td>
                                 <td>{category.description}</td>
                                 <td>
-                                    <Button color="danger" className="mr-2" onClick={() => DeleteCategory(category.categoryId)}>
+                                    <Button color="danger" className="mr-2" onClick={() => handleDelete(category.categoryId)}>
                                         <TrashFill color="white" size={20} />
                                     </Button>
                                 </td>

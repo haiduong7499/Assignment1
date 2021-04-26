@@ -2,15 +2,15 @@ import { host } from '../config.js';
 import axios from 'axios';
 
 
-export const fetchProductData = async () => {
-    const { data } = await axios.get(host + "/api/Product");
+export const fetchCategoryData = async () => {
+    const { data } = await axios.get(host + "/api/Category");
     return data;
 }
 
-export const DeleteProduct = (id) => {
+export const DeleteCategory = (id) => {
     return axios({
         method: "delete",
-        url: host + "/api/Product/" + id,
+        url: host + "/api/Category/" + id,
     })
         .then(({ data }) => {
             console.log(data);
