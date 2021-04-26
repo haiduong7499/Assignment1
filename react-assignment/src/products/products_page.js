@@ -7,22 +7,22 @@ import {fetchProductData, DeleteProduct} from '../service/product.js'
 const Product = () => {
     const [productItems, setProduct] = useState([]);
 
-    const handleDelete = async (id) => {
-        const result = await DeleteProduct(id);
-
-        if (result) {
-            (async () => {
-                const products = await fetchProductData();
-                setProduct(products)
-            })();
-        }
-    };
-
-    useEffect(() => {
+    const fetchData = () =>{
         (async () => {
             const products = await fetchProductData();
             setProduct(products)
         })();
+    }
+
+    const handleDelete = async (id) => {
+        const result = await DeleteProduct(id);
+        if (result) {
+            fetchData();
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
     }, []);
 
     return (

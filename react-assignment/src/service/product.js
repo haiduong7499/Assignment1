@@ -1,6 +1,5 @@
 import { host } from '../config.js';
 import axios from 'axios';
-import {useState} from 'react'
 
 
 export const fetchProductData = async () => {
