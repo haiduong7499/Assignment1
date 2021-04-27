@@ -15,7 +15,7 @@ namespace Assignment.Shared
         public decimal Price { get; set; }
         public string ProductImg { get; set; }
         public int Rate { get; set; }
-        public int CategoryID { get; set; }
+        public string CategoryID { get; set; }
         public string NameCategory { get; set; }
     }
 }

@@ -20,7 +20,7 @@ const User = () => {
             <Table dark>
                 <thead>
                     <tr>
-                        <th>User Name</th>
+                        <th>Id User</th>
                         <th>Email</th>
                         <th>Phone Number</th>
                     </tr>
@@ -28,7 +28,8 @@ const User = () => {
                 <tbody>
                     {
                         user && user.map(user =>
-                            <tr key={user.userName}>
+                            <tr key={user.id}>
+                                <td>{user.id}</td>
                                 <td>{user.email}</td>
                                 <td>{user.phoneNumber}</td>
                             </tr>
