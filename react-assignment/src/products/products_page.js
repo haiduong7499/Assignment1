@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
-import { TrashFill } from 'react-bootstrap-icons'
+import { TrashFill, PenFill } from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom';
 import { fetchProductData, DeleteProduct } from '../service/product.js'
 
 const Product = () => {
+
     const [productItems, setProduct] = useState([]);
 
     const fetchData = () => {
@@ -58,6 +59,24 @@ const Product = () => {
                                     <img src={product.productImg} alt={product.nameProduct} width="150px" height="150px"></img>
                                 </td>
                                 <td>{product.rate}</td>
+                                <td>
+                                    <Button color="secondary" className="mr-2">
+                                        <Link to={{
+                                            pathname: '/createproduct_form/'+ product.productId,
+                                            productId: product.productId,
+                                            product: {
+                                                productId: product.productId,
+                                                name: product.nameProduct,
+                                                description: product.description,
+                                                price: product.price,
+                                                categoryId: product.categoryId,
+                                                images: null,
+                                            }
+                                        }}>
+                                            <PenFill color="white" size={20} />
+                                        </Link>
+                                    </Button>
+                                </td>
                                 <td>
                                     <Button color="danger" className="mr-2" onClick={() => handleDelete(product.productId)}>
                                         <TrashFill color="white" size={20} />

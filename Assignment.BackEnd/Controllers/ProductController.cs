@@ -18,7 +18,7 @@ namespace Assignment.BackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize("Bearer")]
+    //[Authorize("Bearer")]
     public class ProductController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -105,6 +105,7 @@ namespace Assignment.BackEnd.Controllers
 
         [HttpPut("{id}")]
         //[Authorize(Roles = "admin")]
+        [AllowAnonymous]
         public async Task<ActionResult<ProductRespone>> UpdateProduct(string id, [FromForm] ProductUpdateRequest updateRequest)
         {
             var product = await _context.Products.FindAsync(id);

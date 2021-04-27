@@ -1,10 +1,14 @@
 import { React, useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input, InputGroup } from 'reactstrap';
 import axios from 'axios';
+import { useHistory, useParams } from 'react-router-dom';
 import { host } from '../config.js'
 import { useFormik } from 'formik';
 
 const CreateProduct = (props) => {
+    const { id } = useParams();
+    console.log(id);
+    const history = useHistory();
     const [categoryItems, setCategoryItem] = useState([]);
     const [product, setProduct] = useState(null);
 
@@ -20,12 +24,14 @@ const CreateProduct = (props) => {
 
         if (product) {
             alert('successful');
+            history.push('/products_page');
         }
 
     }, [product]);
 
     const formik = useFormik({
         initialValues: {
+            productId: '',
             nameProduct: '',
             description: '',
             price: 0,
@@ -46,13 +52,22 @@ const CreateProduct = (props) => {
             Object.keys(values).forEach(key => {
                 formData.append(key, values[key])
             });
-
-            axios.post(host + "/api/Product", formData)
-                .then(response => {
-                    setProduct(response.data);
-                }).catch((error) => {
-                    console.log('post products err', error);
-                });
+            if (id) {
+                axios.put(host + "/api/Product/" + id, formData)
+                    .then(response => {
+                        setProduct(response.data);
+                    }).catch((error) => {
+                        console.log('put products err', error);
+                    });
+            }
+            else {
+                axios.post(host + "/api/Product", formData)
+                    .then(response => {
+                        setProduct(response.data);
+                    }).catch((error) => {
+                        console.log('post products err', error);
+                    });
+            }
             action.setSubmitting(false);
         }
     })
