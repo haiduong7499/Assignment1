@@ -29,6 +29,9 @@ export default function Routes(props) {
       <Route path="/createproduct_form">
         <CreateProduct />
       </Route>
+      <Route path="/createcategory_form/:id">
+        <CreateCategory />
+      </Route>
       <Route path="/createcategory_form">
         <CreateCategory />
       </Route>

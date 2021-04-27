@@ -50,7 +50,6 @@ namespace Assignment.BackEnd.Controllers
             var cate = _mapper.Map<Category>(request);
             _context.Categories.Add(cate);
             await _context.SaveChangesAsync();
-
             var cateRes = _mapper.Map<CategoryRespone>(cate);
             return cateRes;
         }

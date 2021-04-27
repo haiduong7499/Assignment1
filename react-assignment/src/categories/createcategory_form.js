@@ -1,20 +1,23 @@
 import { React, useState, useEffect } from 'react';
-import { Button, Form, FormGroup, Label, Input, InputGroup } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { host } from '../config.js'
 import { useFormik } from 'formik';
 
 const CreateCategory = (props) => {
-    const [categoryItems, setCategory] = useState([]);
+    const { id } = useParams();
+    console.log(id);
+    const [categoryItems, setCategory] = useState(null);
 
     useEffect(() => {
-        axios.get(host +"/api/Category") 
-        .then(response => {
-            setCategory(response.data);
-        }).catch((error) => {
-            console.log('get category err', error);
-        });
-    }, [categoryItems]);
+        axios.get(host + "/api/Category")
+            .then(response => {
+                setCategory(response.data);
+            }).catch((error) => {
+                console.log('get category err', error);
+            });
+    }, []);
 
     const formik = useFormik({
         initialValues: {
@@ -37,12 +40,22 @@ const CreateCategory = (props) => {
                 formData.append(key, values[key])
             });
 
-            axios.post(host + "/api/Category", formData)
-                .then(response => {
-                    setCategory(response.data);
-                }).catch((error) => {
-                    console.log('post Category err', error);
-                });
+            if (id) {
+                axios.put(host + "/api/Category/" + id, formData)
+                    .then(response => {
+                        setCategory(response.data);
+                    }).catch((error) => {
+                        console.log('put Category err', error);
+                    });
+            }
+            else {
+                axios.post(host + "/api/Category", formData)
+                    .then(response => {
+                        setCategory(response.data);
+                    }).catch((error) => {
+                        console.log('post Category err', error);
+                    });
+            }
             action.setSubmitting(false);
         }
     })
@@ -53,7 +66,7 @@ const CreateCategory = (props) => {
                 <FormGroup>
                     <Label>Id Category</Label>
                     <Input value={formik.values.categoryId} onChange={formik.handleChange}
-                        name="categoryId" type='number'/>
+                        name="categoryId" type='number' />
                 </FormGroup>
                 <FormGroup>
                     <Label for="description">Name Category</Label>
@@ -63,7 +76,7 @@ const CreateCategory = (props) => {
                 <FormGroup>
                     <Label for="price">Description</Label>
                     <Input value={formik.values.description} onChange={formik.handleChange}
-                        name="description" id="description"  />
+                        name="description" id="description" />
                 </FormGroup>
                 <Button disabled={formik.isSubmitting} type='submit' color="success">Submit</Button>
             </Form>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
-import { TrashFill } from 'react-bootstrap-icons';
+import { TrashFill, PenFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
-import {fetchCategoryData, DeleteCategory} from '../service/category';
+import { fetchCategoryData, DeleteCategory } from '../service/category';
 
 const Category = () => {
     const [categoryItems, setCategory] = useState([]);
@@ -14,9 +14,9 @@ const Category = () => {
         })();
     }
 
-    const handleDelete = async (id) =>{
+    const handleDelete = async (id) => {
         const result = await DeleteCategory(id);
-        if(result){
+        if (result) {
             fetchData();
         }
     }
@@ -50,6 +50,21 @@ const Category = () => {
                                 <td>{category.categoryId}</td>
                                 <td>{category.name}</td>
                                 <td>{category.description}</td>
+                                <td>
+                                    <Button color="secondary" className="mr-1">
+                                        <Link to={{
+                                            pathname: '/createcategory_form/' + category.categoryId,
+                                            categoryId: category.categoryId,
+                                            category: {
+                                                productId: category.productId,
+                                                name: category.name,
+                                                description: category.description,
+                                            }
+                                        }}>
+                                            <PenFill color="white" size={20} />
+                                        </Link>
+                                    </Button>
+                                </td>
                                 <td>
                                     <Button color="danger" className="mr-2" onClick={() => handleDelete(category.categoryId)}>
                                         <TrashFill color="white" size={20} />
