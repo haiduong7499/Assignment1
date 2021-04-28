@@ -15,7 +15,7 @@ namespace Assignment.Test
             NameProduct = "Name Product Test",
             Description = "Description Test",
             Price = 1000,
-            ProductImg = "addimage",
+            ProductImg = null,
             CreateDate = DateTime.Now.Date,
             UpdateDate = DateTime.Now.Date,
             CategoryID = "CategoryId",

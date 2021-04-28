@@ -12,7 +12,6 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\Assign
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\web.config
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\appsettings.Development.json
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\appsettings.json
-E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\Assignment.BackEnd.StaticWebAssets.xml
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\Assignment.BackEnd.exe
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\Assignment.CustomerSite.Views.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\Assignment.CustomerSite.Views.pdb
