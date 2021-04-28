@@ -73,9 +73,35 @@ namespace Assignment.Test.Controller
             Assert.Equal("Name Product Test", resultValue.NameProduct);
             Assert.Equal("Description Test", resultValue.Description);
             Assert.Equal(1000, resultValue.Price);
-            Assert.Equal(null, resultValue.ProductImg);
+            Assert.Null(resultValue.ProductImg);
             Assert.Equal("CategoryId",resultValue.CategoryID);
             Assert.Equal(5, resultValue.Rate);
+        }
+
+
+        [Fact]
+        public async Task GetProductByCate_Success()
+        {
+            //Arrange
+            var dbContext = _fixture.Context;
+            var mapper = ProductProfile.Get();
+            var storage = FileStorageService.IStorageService();
+
+            var category = UnitTest1.CategoryTest();
+            await dbContext.AddAsync(category);
+            await dbContext.SaveChangesAsync();
+
+            var product = UnitTest1.TestProduct();
+            await dbContext.AddAsync(product);
+            await dbContext.SaveChangesAsync();
+
+            var productController = new ProductController(dbContext, mapper, storage);
+            //Act
+
+            var result = await productController.GetProductByCategory(category.CategoryId);
+            //Assert
+            var postProductResult = Assert.IsAssignableFrom<IEnumerable<ProductRespone>>(result);
+            Assert.NotEmpty(postProductResult);
         }
     }
 }
