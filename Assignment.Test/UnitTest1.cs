@@ -44,7 +44,7 @@ namespace Assignment.Test
             NameCategory = "Name Category Test"
         };
 
-        public static Category CatagoryTest() => new Category
+        public static Category CategoryTest() => new Category
         {
             CategoryId = "CategoryId",
             Name = "Name Test",
