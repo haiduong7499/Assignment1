@@ -20,29 +20,29 @@ For admin:
 ______________________
 Feature
 For customer site:
-+Home page: category menu, features products
-+View products by category
-+View product details
-+Product rating
-+Product review
-+Register
-+Login/Logout
++ Home page: category menu, features products
++ View products by category
++ View product details
++ Product rating
++ Product review
++ Register
++ Login/Logout
 
 For admin site:
 
-+Manage product categories (Create, Edit, Delete)
-+Manage products (Create, Edit, Delete)
-+View customers
++ Manage product categories (Create, Edit, Delete)
++ Manage products (Create, Edit, Delete)
++ View customers
 
 Online demo (Azure Website)
-Backend: haiduongassignment.azurewebsites.net
-Frontend: haiduongcustomersite.azurewebsites.net
++ Backend: haiduongassignment.azurewebsites.net
++ Frontend: haiduongcustomersite.azurewebsites.net
 
 Account:
 Customer => Email: haiduong7499@gmail.com / Password: Duong74((
 
 Reference Source
-https://github.com/thiennn/myshop
-https://github.com/khaihung215
-https://docs.microsoft.com/vi-vn/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-5.0
-https://themehunt.com/item/1525883-unistore-bootstrap-responsive-e-commerce-template
++ https://github.com/thiennn/myshop
++ https://github.com/khaihung215
++ https://docs.microsoft.com/vi-vn/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-5.0
++ https://themehunt.com/item/1525883-unistore-bootstrap-responsive-e-commerce-template
