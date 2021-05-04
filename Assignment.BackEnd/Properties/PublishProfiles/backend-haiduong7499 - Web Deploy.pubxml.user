@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkdrxOMABB0+zzuGfuLf4wQAAAAACAAAAAAAQZgAAAAEAACAAAACttZf0zpqzc757NbgzefRdVSMrt/aKOjS0NF5USD+QJAAAAAAOgAAAAAIAACAAAABrGScnm+vW+cNSC+StZzksRKOy4uY68gE8UGbZYO0NFIAAAADdMpX27FnEZCZINZagB+IAgzbKVj5syYxCmNzTccH/XyM39T9fNInpIj03VIdX+kLEiz4/nrVFVum0CLmDuDuUY6u05uABTk1Oep7joB8X0QSYxj4x4cKUpvgb4LmeXQiQvCPJEK/JuJr9jBL+Rwkk127aeWXrZRm+GCS2nibLl0AAAAAqp7XimnuUx1dB25qAJrslB8NxwTh43/pJG4NE6FXOi6nhwqTTT+b+gt8j3YRw9v2d07Ht79l2OWUjQ9etFeFi</EncryptedPassword>
+    <History>True|2021-05-04T09:10:01.4294216Z;True|2021-05-04T14:45:48.7209199+07:00;True|2021-05-04T14:39:04.5228048+07:00;True|2021-05-04T13:57:40.9696723+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:sqlserver-haiduong7499.database.windows.net,1433%3bInitial Catalog=RookieShop%3bPersist Security Info=False%3bUser ID=RK07%3bPassword=DN3XUgC6%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Assignment.BackEnd.Data.ApplicationDbContext">
+      <Value>Server=tcp:sqlserver-haiduong7499.database.windows.net,1433%3bInitial Catalog=RookieShop%3bPersist Security Info=False%3bUser ID=RK07%3bPassword=DN3XUgC6%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
