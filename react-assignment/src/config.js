@@ -1,1 +1,1 @@
-export const host = 'https://localhost:44303';
+export const host = 'https://backend-haiduong7499.azurewebsites.net';
