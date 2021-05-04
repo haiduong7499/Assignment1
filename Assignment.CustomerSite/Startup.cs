@@ -35,7 +35,7 @@ namespace Assignment.CustomerSite
                 .AddCookie("Cookies")
                 .AddOpenIdConnect("oidc", options =>
                 {
-                    options.Authority = "https://localhost:44303";
+                    options.Authority = "https://backend-haiduong7499.azurewebsites.net";
                     options.RequireHttpsMetadata = false;
                     options.GetClaimsFromUserInfoEndpoint = true;
 
