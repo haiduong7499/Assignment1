@@ -200,3 +200,4 @@ E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\obj\Debug\net5.0\Assign
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\obj\Debug\net5.0\ref\Assignment.Test.dll
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\obj\Debug\net5.0\Assignment.Test.pdb
 E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\obj\Debug\net5.0\Assignment.Test.genruntimeconfig.cache
+E:\Year4\NashTech\New folder\Assignment1\Assignment.Test\bin\Debug\net5.0\Assignment.BackEnd.StaticWebAssets.xml
