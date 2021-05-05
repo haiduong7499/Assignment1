@@ -35,14 +35,16 @@ For admin site:
 + View customers
 
 Online demo (Azure Website)
-+ Backend: haiduongassignment.azurewebsites.net
-+ Frontend: haiduongcustomersite.azurewebsites.net
++ Backend: https://backend-haiduong7499.azurewebsites.net
++ Frontend: https://customersite-haiduong7499.azurewebsites.net
++ React: https://sahaiduong7499.z23.web.core.windows.net
 
 Account:
 Customer => Email: haiduong7499@gmail.com / Password: Duong74((
 
 Reference Source
 + https://github.com/thiennn/myshop
++ https://github.com/onggieoi/NashEcommerce
 + https://github.com/khaihung215
 + https://docs.microsoft.com/vi-vn/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-5.0
 + https://themehunt.com
